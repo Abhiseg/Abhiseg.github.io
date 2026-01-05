@@ -1,0 +1,264 @@
+
+<!DOCTYPE html>
+<!--
+TEMPLATE: Academic Personal Website (Multi-page, GitHub Pages)
+Inspired by clean faculty websites like diptarkahait.com
+
+USAGE:
+- Save this file as index.html (About page)
+- Copy this file to create research.html, publications.html, cv.html, contact.html
+- For research and publications subsections, create folders:
+    /research/your-topic.html
+    /publications/your-category.html
+- Replace ALL placeholder text marked with [[ ... ]]
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[[Your Name]] | Academic Homepage</title>
+
+  <!-- ===== Shared Style (same for all pages) ===== -->
+  <style>
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fafafa;
+    }
+    header {
+      background: #1f2937;
+      color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    nav {
+      background: #374151;
+      padding: 0.6rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #e5e7eb;
+      margin: 0 0.9rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+      color: #111827;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    a {
+      color: #2563eb;
+    }
+    .center {
+      text-align: center;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #555;
+      background: #e5e7eb;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ===== Site Header ===== -->
+<header>
+  <h1>[[Abhisek Ghosal]]</h1>
+  <p>[[Your Title / One-line Research Identity]]</p>
+</header>
+
+<!-- ===== Global Navigation (same on ALL pages) ===== -->
+<nav>
+  <a href="index.html">About</a>
+  <a href="research.html">Research Interests</a>
+  <a href="publications.html">Publications</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+<!-- =================================================== -->
+<!-- =================== ABOUT PAGE ==================== -->
+<!-- This file (index.html) is the About page            -->
+<!-- =================================================== -->
+
+<main>
+  <h2>About Me</h2>
+
+  <div class="center" style="margin: 1.5rem 0;">
+    <!-- Replace profile.jpg with your photo -->
+    <img src="abhisek_photo.jpg" alt="[[Abhisek Ghosal]]"
+         style="width:180px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+  </div>
+
+  <p style="text-align: justify;">
+    [[Write a concise faculty-style bio here. Keep it short, clear, and forward-looking.]]
+  </p>
+
+  <!-- OPTIONAL quick links -->
+  <!--
+  <p class="center">
+    <a href="CV.pdf">Download CV</a> | 
+    <a href="[[Google Scholar URL]]">Google Scholar</a>
+  </p>
+  -->
+  
+  <!-- =================================================== -->
+  <!-- ===== Research & Publications Preview (Home) ===== -->
+  <!-- Inspired by split animated preview on diptarkahait.com -->
+  <!-- =================================================== -->
+
+  <section style="margin-top:3rem;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:center;">
+
+      <!-- ===== Research Preview ===== -->
+      <div>
+        <h2>Research Interests</h2>
+        <p>[[One-line summary of your research interests]]</p>
+        <div style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+          <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:1;transition:opacity 1s;" />
+          <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:0;transition:opacity 1s;" />
+          <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:0;transition:opacity 1s;" />
+        </div>
+        <p><a href="research.html">Explore research →</a></p>
+      </div>
+
+      <!-- ===== Publications Preview ===== -->
+      <div>
+        <h2>Publications</h2>
+        <p>[[One-line summary of publication themes]]</p>
+        <div style="position:relative;width:100%;height:220px;overflow:hidden;border-radius:8px;box-shadow:0 4px 10px rgba(0,0,0,0.1);">
+          <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:1;transition:opacity 1s;" />
+          <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:0;transition:opacity 1s;" />
+          <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%;position:absolute;opacity:0;transition:opacity 1s;" />
+        </div>
+        <p><a href="publications.html">View publications →</a></p>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Simple synchronized slideshow (no library) ===== -->
+<script>
+  let rIndex = 0;
+  let pIndex = 0;
+  const rSlides = document.querySelectorAll('.research-slide');
+  const pSlides = document.querySelectorAll('.pub-slide');
+
+  setInterval(() => {
+    rSlides[rIndex].style.opacity = 0;
+    pSlides[pIndex].style.opacity = 0;
+
+    rIndex = (rIndex + 1) % rSlides.length;
+    pIndex = (pIndex + 1) % pSlides.length;
+
+    rSlides[rIndex].style.opacity = 1;
+    pSlides[pIndex].style.opacity = 1;
+  }, 3500);
+</script>
+
+<!-- =================================================== -->
+<!-- ===== TEMPLATE NOTES FOR OTHER PAGES (COPY) ======= -->
+<!-- =================================================== -->
+
+<!--
+==================== research.html ====================
+<main>
+  <h2>Research Interests</h2>
+  <p>[[Short overview paragraph]]</p>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3><a href="research/topic1.html">[[Research Topic 1]]</a></h3>
+      <p>[[1–2 line description]]</p>
+    </div>
+    <div class="card">
+      <h3><a href="research/topic2.html">[[Research Topic 2]]</a></h3>
+      <p>[[1–2 line description]]</p>
+    </div>
+  </div>
+</main>
+
+================ research/topicX.html =================
+<main>
+  <h2>[[Research Topic Title]]</h2>
+  <p>[[Detailed description of this research theme]]</p>
+
+  <h3>Related Publications</h3>
+  <ul>
+    <li>[[Paper 1]]</li>
+    <li>[[Paper 2]]</li>
+  </ul>
+</main>
+
+================== publications.html ==================
+<main>
+  <h2>Publications</h2>
+  <ul>
+    <li><a href="publications/category1.html">[[Category 1]]</a></li>
+    <li><a href="publications/category2.html">[[Category 2]]</a></li>
+  </ul>
+</main>
+
+========== publications/categoryX.html ================
+<main>
+  <h2>[[Publication Category]]</h2>
+  <ol>
+    <li>[[Author list]], <i>Journal</i> (Year)</li>
+  </ol>
+</main>
+-->
+
+<footer>
+  © [[Year]] [[Your Name]]
+</footer>
+
+</body>
+</html>
+

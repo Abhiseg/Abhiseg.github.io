@@ -1,94 +1,156 @@
 <!DOCTYPE html>
+<!--
+TEMPLATE: Academic Personal Website (Multi-page, GitHub Pages)
+Inspired by clean faculty websites like diptarkahait.com
+
+USAGE:
+- Save this file as index.html (About page)
+- Copy this file to create research.html, publications.html, cv.html, contact.html
+- For research and publications subsections, create folders:
+    /research/your-topic.html
+    /publications/your-category.html
+- Replace ALL placeholder text marked with [[ ... ]]
+-->
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Abhisek Ghosal | Theoretical Chemist</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>[[Your Name]] | Academic Homepage</title>
+
+  <!-- ===== Shared Style (same for all pages) ===== -->
   <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#fafafa; color:#222; }
-    header { background:#111; color:white; text-align:center; padding:2rem 1rem; }
-    header h1 { margin:0; font-size:2.8rem; }
-    header p { margin:0.5rem 0 0; font-size:1.2rem; opacity:0.9; }
-    nav { background:#222; text-align:center; padding:0.8rem; position:sticky; top:0; }
-    nav a { color:white; margin:0 1rem; text-decoration:none; font-weight:500; }
-    nav a:hover { text-decoration:underline; }
-    section { max-width:900px; margin:2rem auto; padding:0 1rem; }
-    h2 { border-bottom:2px solid #ddd; padding-bottom:0.3rem; }
-    footer { text-align:center; padding:1rem; font-size:0.9rem; color:#555; background:#eee; }
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #222;
+      background-color: #fafafa;
+    }
+    header {
+      background: #1f2937;
+      color: #fff;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      opacity: 0.9;
+    }
+    nav {
+      background: #374151;
+      padding: 0.6rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+    nav a {
+      color: #e5e7eb;
+      margin: 0 0.9rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.2rem;
+    }
+    h2 {
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 0.3rem;
+      color: #111827;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    li {
+      margin-bottom: 0.6rem;
+    }
+    a {
+      color: #2563eb;
+    }
+    .center {
+      text-align: center;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+    .card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #555;
+      background: #e5e7eb;
+      margin-top: 3rem;
+    }
   </style>
 </head>
+
 <body>
 
+<!-- ===== Site Header ===== -->
 <header>
-  <h1>Abhisek Ghosal</h1>
-  <p>Theoretical & Computational Chemist focused on electronic-structure theory and excited states</p>
+  <h1>[[Abhisek Ghosal]]</h1>
+  <p>[[Your Title / One-line Research Identity]]</p>
 </header>
 
+<!-- ===== Global Navigation (same on ALL pages) ===== -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#research">Research</a>
-  <a href="#publications">Publications</a>
-  <a href="#projects">Projects</a>
-  <a href="#cv">CV</a>
-  <a href="#contact">Contact</a>
+  <a href="index.html">About</a>
+  <a href="research.html">Research Interests</a>
+  <a href="publications.html">Publications</a>
+  <a href="cv.html">CV</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-<section id="about">
+<!-- =================================================== -->
+<!-- =================== ABOUT PAGE ==================== -->
+<!-- This file (index.html) is the About page            -->
+<!-- =================================================== -->
+
+<main>
   <h2>About Me</h2>
-  <div style="text-align:center;margin:1.5rem 0;">
-    <img src="abhisek_photo.jpg" alt="Abhisek Ghosal"
-      style="width:180px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.2);"/>
+
+  <div class="center" style="margin: 1.5rem 0;">
+    <!-- Replace profile.jpg with your photo -->
+    <img src="abhisek_photo.jpg" alt="[[Abhisek Ghosal]]"
+         style="width:180px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
   </div>
-  <p style="text-align:justify;">
-    I am a theoretical and computational chemist using quantum mechanics
-    to model excited states, auto-ionization, and resonance phenomena. My work 
-    spans method development in DFT/TDDFT, non-Hermitian approaches, and high-performance 
-    scientific computing.
+
+  <p style="text-align: justify;">
+    [[Write a concise faculty-style bio here. Keep it short, clear, and forward-looking.]]
   </p>
-</section>
 
-<section id="research">
-  <h2>Research Interests</h2>
-  <ul>
-    <li>Density Functional Theory & Time-Dependent DFT</li>
-    <li>Auto-ionizing and Resonance States</li>
-    <li>Electronic Excited State Methods</li>
-    <li>Method & Software Development</li>
-  </ul>
-</section>
-
-<section id="publications">
-  <h2>Publications</h2>
-  <p>Latest papers (full list on <a href="GOOGLE_SCHOLAR_URL" target="_blank">Google Scholar</a>):</p>
-  <ul>
-    <li>Paper 1 …</li>
-    <li>Paper 2 …</li>
-  </ul>
-</section>
-
-<section id="projects">
-  <h2>Projects & Software</h2>
-  <ul>
-    <li><strong>InDFT</strong> — DFT code for atoms & molecules</li>
-    <li><strong>Turbomole contributions</strong></li>
-    <li><strong>PyOpenCAP</strong> — CAP-MRCI workflows</li>
-  </ul>
-</section>
-
-<section id="cv">
-  <h2>CV & Links</h2>
-  <p>
-    <a href="CV.pdf" target="_blank">Download CV</a><br/>
-    <a href="GOOGLE_SCHOLAR_URL" target="_blank">Google Scholar</a>
+  <!-- OPTIONAL quick links -->
+  <!--
+  <p class="center">
+    <a href="CV.pdf">Download CV</a> | 
+    <a href="[[Google Scholar URL]]">Google Scholar</a>
   </p>
-</section>
+  -->
+  
+</main>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <em>abhisek.ghosal@northwestern.edu</em></p>
-</section>
-
-<footer>© 2026 Abhisek Ghosal</footer>
+<footer>
+  © [[Year]] [[Your Name]]
+</footer>
 
 </body>
 </html>
