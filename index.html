@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <!--
-TEMPLATE: Academic Personal Website (Multi-page, GitHub Pages)
-Inspired by clean faculty websites like diptarkahait.com
+FRESH START TEMPLATE
+====================
+Purpose:
+- index.html is ONLY a landing page
+- It shows: name, photo, brief description, and section headers
+- Clicking a header goes to a DIFFERENT page
 
-USAGE:
-- Save this file as index.html (About page)
-- Copy this file to create research.html, publications.html, cv.html, contact.html
-- For research and publications subsections, create folders:
-    /research/your-topic.html
-    /publications/your-category.html
-- Replace ALL placeholder text marked with [[ ... ]]
+You will create separate pages:
+- about.html        (full About Me)
+- research.html     (research overview)
+- publications.html (publication categories)
+- cv.html
+- contact.html
+
+This file = index.html ONLY
 -->
 <html lang="en">
 <head>
@@ -17,139 +22,128 @@ USAGE:
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>[[Your Name]] | Academic Homepage</title>
 
-  <!-- ===== Shared Style (same for all pages) ===== -->
   <style>
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
       padding: 0;
-      line-height: 1.6;
+      background: #fafafa;
       color: #222;
-      background-color: #fafafa;
     }
     header {
       background: #1f2937;
-      color: #fff;
+      color: white;
       padding: 2.5rem 1rem;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.4rem;
+      font-size: 2.5rem;
     }
     header p {
-      margin-top: 0.5rem;
+      margin-top: 0.6rem;
       font-size: 1.1rem;
       opacity: 0.9;
     }
-    nav {
-      background: #374151;
-      padding: 0.6rem;
+    main {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
       text-align: center;
-      position: sticky;
-      top: 0;
     }
-    nav a {
-      color: #e5e7eb;
-      margin: 0 0.9rem;
+    img {
+      width: 200px;
+      border-radius: 50%;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    }
+    .description {
+      margin-top: 2rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+    .sections {
+      margin-top: 3.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      font-size: 1.2rem;
+      flex-wrap: wrap;
+    }
+    .sections a {
       text-decoration: none;
-      font-weight: 500;
+      color: #1f2937;
+      font-weight: bold;
     }
-    nav a:hover {
+    .sections a:hover {
       text-decoration: underline;
     }
-    main {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 0 1.2rem;
-    }
-    h2 {
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 0.3rem;
-      color: #111827;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    li {
-      margin-bottom: 0.6rem;
-    }
-    a {
-      color: #2563eb;
-    }
-    .center {
-      text-align: center;
-    }
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1.2rem;
-      margin-top: 1.5rem;
-    }
-    .card {
-      background: #ffffff;
-      border-radius: 8px;
-      padding: 1.2rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
     footer {
+      margin-top: 4rem;
+      padding: 1.2rem;
       text-align: center;
-      padding: 1.5rem;
       font-size: 0.9rem;
       color: #555;
-      background: #e5e7eb;
-      margin-top: 3rem;
     }
   </style>
 </head>
 
 <body>
 
-<!-- ===== Site Header ===== -->
 <header>
-  <h1>[[Abhisek Ghosal]]</h1>
-  <p>[[Your Title / One-line Research Identity]]</p>
+  <h1>[Abhisek Ghosal]</h1>
+  <p>[[Your title / one-line research identity]]</p>
 </header>
 
-<!-- ===== Global Navigation (same on ALL pages) ===== -->
-<nav>
-  <a href="index.html">About</a>
-  <a href="research.html">Research Interests</a>
-  <a href="publications.html">Publications</a>
-  <a href="cv.html">CV</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<!-- =================================================== -->
-<!-- =================== ABOUT PAGE ==================== -->
-<!-- This file (index.html) is the About page            -->
-<!-- =================================================== -->
-
 <main>
-  <h2>About Me</h2>
 
-  <div class="center" style="margin: 1.5rem 0;">
-    <!-- Replace profile.jpg with your photo -->
-    <img src="abhisek_photo.jpg" alt="[[Abhisek Ghosal]]"
-         style="width:180px;border-radius:50%;box-shadow:0 4px 12px rgba(0,0,0,0.15);" />
+  <!-- Centered photo -->
+  <img src="abhisek_photo.jpg" alt="[Abhisek Ghosal]" />
+
+  <!-- Short description -->
+  <p class="description">
+    [[2–3 sentence high-level description of who you are and what you work on.]]
+  </p>
+
+  <!-- Section headers ONLY -->
+  <div class="sections">
+    <a href="about.html">About Me</a>
+    <a href="research.html">Research</a>
+    <a href="publications.html">Publications</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
   </div>
 
-  <p style="text-align: justify;">
-    [[Write a concise faculty-style bio here. Keep it short, clear, and forward-looking.]]
-  </p>
+  <!-- ===== Research & Publications Visual Preview ===== -->
+  <!-- These are ONLY visual teasers; clicking text still goes to separate pages -->
 
-  <!-- OPTIONAL quick links -->
-  <!--
-  <p class="center">
-    <a href="CV.pdf">Download CV</a> | 
-    <a href="[[Google Scholar URL]]">Google Scholar</a>
-  </p>
-  -->
-  
+  <div style="margin-top:4rem; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
+
+    <!-- Research visual -->
+    <div>
+      <h3 style="margin-bottom:0.8rem;">Research Interests</h3>
+      <div style="position:relative; width:100%; height:220px; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.12);">
+        <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:1; transition:opacity 1s;" />
+        <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:0; transition:opacity 1s;" />
+      </div>
+      <p style="margin-top:0.8rem;"><a href="research.html">Go to Research →</a></p>
+    </div>
+
+    <!-- Publications visual -->
+    <div>
+      <h3 style="margin-bottom:0.8rem;">Publications</h3>
+      <div style="position:relative; width:100%; height:220px; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.12);">
+        <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:1; transition:opacity 1s;" />
+        <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:0; transition:opacity 1s;" />
+      </div>
+      <p style="margin-top:0.8rem;"><a href="publications.html">Go to Publications →</a></p>
+    </div>
+
+  </div>
+
 </main>
 
 <footer>
-  © [[Year]] [[Your Name]]
+  © [2026] [Abhisek Ghosal]
 </footer>
 
 </body>
