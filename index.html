@@ -1,21 +1,4 @@
 <!DOCTYPE html>
-<!--
-FRESH START TEMPLATE
-====================
-Purpose:
-- index.html is ONLY a landing page
-- It shows: name, photo, brief description, and section headers
-- Clicking a header goes to a DIFFERENT page
-
-You will create separate pages:
-- about.html        (full About Me)
-- research.html     (research overview)
-- publications.html (publication categories)
-- cv.html
-- contact.html
-
-This file = index.html ONLY
--->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -23,88 +6,37 @@ This file = index.html ONLY
   <title>[[Your Name]] | Academic Homepage</title>
 
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #222;
-    }
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 2.5rem 1rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 0.6rem;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
-    main {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-    img {
-      width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-    }
-    .description {
-      margin-top: 2rem;
-      font-size: 1.05rem;
-      line-height: 1.6;
-    }
-    .sections {
-      margin-top: 3.5rem;
-      display: flex;
-      justify-content: center;
-      gap: 3rem;
-      font-size: 1.2rem;
-      flex-wrap: wrap;
-    }
-    .sections a {
-      text-decoration: none;
-      color: #1f2937;
-      font-weight: bold;
-    }
-    .sections a:hover {
-      text-decoration: underline;
-    }
-    footer {
-      margin-top: 4rem;
-      padding: 1.2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-    }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
+    header { background: #1f2937; color: white; padding: 2.5rem 1rem; text-align: center; }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; }
+    main { max-width: 900px; margin: 3rem auto; padding: 0 1.5rem; text-align: center; }
+    img.profile { width: 200px; border-radius: 50%; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
+    .description { margin-top: 2rem; font-size: 1.05rem; line-height: 1.6; }
+    .sections { margin-top: 3.5rem; display: flex; justify-content: center; gap: 3rem; font-size: 1.2rem; flex-wrap: wrap; }
+    .sections a { text-decoration: none; color: #1f2937; font-weight: bold; }
+    .sections a:hover { text-decoration: underline; }
+    footer { margin-top: 4rem; padding: 1.2rem; text-align: center; font-size: 0.9rem; color: #555; }
+
+    /* Grid for Research & Publications teaser */
+    .teaser-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: start; }
+    .teaser { border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); overflow: hidden; position: relative; height: 240px; }
+    .teaser img { width: 100%; position: absolute; opacity: 0; transition: opacity 1s; height: 100%; object-fit: cover; }
+    .teaser img.active { opacity: 1; }
+    .teaser h3 { margin-bottom: 0.6rem; }
+    .teaser a { display: inline-block; margin-top: 0.6rem; }
   </style>
 </head>
-
 <body>
 
 <header>
-  <h1>[Abhisek Ghosal]</h1>
+  <h1>Abhisek Ghosal</h1>
   <p>[[Your title / one-line research identity]]</p>
 </header>
 
 <main>
 
-  <!-- Centered photo -->
-  <img src="abhisek_photo.jpg" alt="[Abhisek Ghosal]" />
-
-  <!-- Short description -->
-  <p class="description">
-    [[2–3 sentence high-level description of who you are and what you work on.]]
-  </p>
-
-  <!-- Section headers ONLY -->
+  <!-- Section headers -->
   <div class="sections">
     <a href="about.html">About Me</a>
     <a href="research.html">Research</a>
@@ -113,38 +45,52 @@ This file = index.html ONLY
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- ===== Research & Publications Visual Preview ===== -->
-  <!-- These are ONLY visual teasers; clicking text still goes to separate pages -->
+  <!-- Centered profile -->
+  <img src="abhisek_photo.jpg" alt="[Abhisek Ghosal]" class="profile" />
 
-  <div style="margin-top:4rem; display:grid; grid-template-columns:1fr 1fr; gap:2.5rem; align-items:center;">
+  <!-- Short description -->
+  <p class="description">[[2–3 sentence high-level description of who you are and what you work on.]]</p>
 
-    <!-- Research visual -->
-    <div>
-      <h3 style="margin-bottom:0.8rem;">Research Interests</h3>
-      <div style="position:relative; width:100%; height:220px; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.12);">
-        <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:1; transition:opacity 1s;" />
-        <img class="research-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:0; transition:opacity 1s;" />
-      </div>
-      <p style="margin-top:0.8rem;"><a href="research.html">Go to Research →</a></p>
+  <!-- Split teaser: Research & Publications -->
+  <div class="teaser-grid">
+
+    <!-- Research teaser -->
+    <div class="teaser" id="research-teaser">
+      <h3>Research Interests</h3>
+      <img src="images/abhisek_photo.jpg" class="active" />
+      <img src="images/abhisek_photo.jpg" />
+      <p><a href="research.html">Go to Research →</a></p>
     </div>
 
-    <!-- Publications visual -->
-    <div>
-      <h3 style="margin-bottom:0.8rem;">Publications</h3>
-      <div style="position:relative; width:100%; height:220px; overflow:hidden; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.12);">
-        <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:1; transition:opacity 1s;" />
-        <img class="pub-slide" src="images/abhisek_photo.jpg" style="width:100%; position:absolute; opacity:0; transition:opacity 1s;" />
-      </div>
-      <p style="margin-top:0.8rem;"><a href="publications.html">Go to Publications →</a></p>
+    <!-- Publications teaser -->
+    <div class="teaser" id="pub-teaser">
+      <h3>Publications</h3>
+      <img src="images/abhisek_photo.jpg" class="active" />
+      <img src="images/abhisek_photo.jpg" />
+      <p><a href="publications.html">Go to Publications →</a></p>
     </div>
 
   </div>
-
 </main>
 
-<footer>
-  © [2026] [Abhisek Ghosal]
-</footer>
+<footer>© [2026] [Abhisek Ghosal]</footer>
+
+<!-- JS for simultaneous slideshow -->
+<script>
+function startSlideshow(teaserId) {
+  const teaser = document.getElementById(teaserId);
+  const slides = teaser.querySelectorAll('img');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3500);
+}
+
+startSlideshow('research-teaser');
+startSlideshow('pub-teaser');
+</script>
 
 </body>
 </html>
