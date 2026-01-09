@@ -46,6 +46,24 @@
     .teaser img.active { opacity: 1; }
     .teaser h3 { margin: 0; padding: 0.6rem; background-color: #1f2937; color: white; }
     .teaser a { display: inline-block; margin: 0.6rem; color: #1f2937; font-weight: bold; }
+
+    .slides {
+      position: relative;
+      height: calc(100% - 100px); /* header + footer space */
+}
+
+    .slides img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s;
+}
+
+    .slides img.active {
+      opacity: 1;
+}
     /* Slideshow arrows (like Diptarka Hait) */
     .arrow {
     position: absolute;
@@ -127,9 +145,11 @@
       <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
       <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
       <h3>Publications</h3>
-      <img src="publication_images/chellam_jpcc_2025.png" class="active" />
-      <img src="publication_images/tyagi_pccp_2025.png" />
-      <img src="publication_images/ghosal_jcp_2026.png" />
+      <div class="slides">
+        <img src="publication_images/chellam_jpcc_2025.png" class="active" />
+        <img src="publication_images/tyagi_pccp_2025.png" />
+        <img src="publication_images/ghosal_jcp_2026.png" />
+      </div>
       <p><a href="publications.html">Go to Publications →</a></p>
     </div>
 
@@ -176,8 +196,15 @@ function prevSlide(teaserId) {
 }
 
 function startSlideshow(teaserId) {
-  slideIndex[teaserId] = 0;
-  setInterval(() => nextSlide(teaserId), 3500);
+  const teaser = document.getElementById(teaserId);
+  const slides = teaser.querySelectorAll('.slides img');
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, 3500);
 }
 
 
