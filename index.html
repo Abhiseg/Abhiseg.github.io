@@ -6,57 +6,24 @@
   <title>Abhisek Ghosal | Academic Homepage</title>
 
   <style>
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fafafa;
-      color: #222;
-    }
-
-    header {
-      background: #1f2937;
-      color: white;
-      padding: 2.5rem 1rem;
-      text-align: center;
-    }
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
+    header { background: #1f2937; color: white; padding: 2.5rem 1rem; text-align: center; }
     header h1 { margin: 0; font-size: 2.5rem; }
     header p { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; }
+    main { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; text-align: center; }
+    img.profile { width: 200px; border-radius: 50%; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
 
-    main {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
-
-    img.profile {
-      width: 200px;
-      border-radius: 50%;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-    }
-
-    /* Description styling */
+    /* Short description */
     .description {
       margin-top: 2rem;
       font-size: 1.1rem;
       line-height: 1.6;
       color: #374151;
     }
-    .description span {
-      font-style: italic;
-      color: #1f2937;
-      font-weight: 500;
-    }
+    .description span { font-style: italic; color: #1f2937; font-weight: 500; }
 
     /* Section headers */
-    .sections {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin-bottom: 3rem;
-    }
+    .sections { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
     .sections a {
       text-decoration: none;
       color: white;
@@ -68,69 +35,39 @@
     }
     .sections a:hover { background-color: #374151; }
 
-    footer {
-      margin-top: 4rem;
-      padding: 1.2rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #555;
-    }
+    footer { margin-top: 4rem; padding: 1.2rem; text-align: center; font-size: 0.9rem; color: #555; }
 
-    /* Grid for Research & Publications teaser */
-    .teaser-grid {
-      margin-top: 4rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-      gap: 2.5rem;
-      align-items: start;
-    }
+    /* Teaser grid */
+    .teaser-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; }
 
+    /* Teaser cards */
     .teaser {
+      position: relative;
       border-radius: 8px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.12);
       overflow: hidden;
-      position: relative;
       height: 520px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
 
-    .teaser h3 {
-      margin: 0;
-      padding: 0.6rem;
-      background-color: #1f2937;
-      color: white;
-    }
+    .teaser h3 { margin: 0; padding: 0.6rem; background-color: #1f2937; color: white; }
+    .teaser a { display: inline-block; margin: 0.6rem; color: #1f2937; font-weight: bold; }
 
-    .teaser a {
-      display: inline-block;
-      margin: 0.6rem;
-      color: #1f2937;
-      font-weight: bold;
-    }
+    /* Slides container */
+    .slides { position: relative; width: 100%; height: calc(100% - 60px); /* leave space for header */ }
 
-    /* Slides */
-    .slides {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
     .slides img {
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 0;
       transition: opacity 1s ease-in-out;
     }
-    .slides img.active {
-      opacity: 1;
-    }
 
-    /* Slideshow arrows */
+    .slides img.active { opacity: 1; }
+
+    /* Arrows */
     .arrow {
       position: absolute;
       top: 50%;
@@ -147,11 +84,10 @@
     .arrow:hover { background: rgba(0,0,0,0.8); }
     .arrow.left { left: 8px; }
     .arrow.right { right: 8px; }
-
   </style>
 </head>
-
 <body>
+
 <header>
   <h1>Abhisek Ghosal</h1>
   <p>A theoretical and computational chemist</p>
@@ -167,75 +103,76 @@
     <a href="contact.html">Contact</a>
   </div>
 
-  <!-- Profile picture -->
+  <!-- Profile -->
   <img src="abhisek_photo.jpg" alt="Abhisek Ghosal" class="profile" />
-
-  <!-- Short description -->
   <p class="description">
     I am a physical chemist specializing in <span>quantum-chemistry approaches</span> to chemical problems.<br>
-    In the spirit of the uncertainty principle, I am currently located at <span>Northwestern University</span>, with research momentum extending globally.<br>
-    My research focuses on the development of new <span>theoretical frameworks, computational methodologies,</span> and efficient algorithms to address fundamental and applied challenges in chemistry, with the aim of achieving <span>experimental-level chemical accuracy</span>.
+    I am currently located at <span>Northwestern University</span>.<br>
+    My research focuses on <span>theoretical frameworks, computational methodologies</span>, and efficient algorithms for chemical challenges.
   </p>
 
   <!-- Teaser grid -->
   <div class="teaser-grid">
 
-    <!-- Research Teaser -->
+    <!-- Research teaser -->
     <div class="teaser" id="research-teaser">
-      <button class="arrow left" onclick="prevSlide('research-teaser')">&#10094;</button>
-      <button class="arrow right" onclick="nextSlide('research-teaser')">&#10095;</button>
       <h3>Research Interests</h3>
       <div class="slides">
-        <img src="images/research1.jpg" class="active" />
-        <img src="images/research2.jpg" />
-        <img src="images/research3.jpg" />
+        <img src="images/research1.jpg" class="active">
+        <img src="images/research2.jpg">
+        <img src="images/research3.jpg">
       </div>
+      <button class="arrow left" onclick="prevSlide('research-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('research-teaser')">&#10095;</button>
       <p><a href="research.html">Go to Research →</a></p>
     </div>
 
-    <!-- Publications Teaser -->
+    <!-- Publications teaser -->
     <div class="teaser" id="pub-teaser">
-      <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
-      <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
       <h3>Publications</h3>
       <div class="slides">
-        <img src="publication_images/chellam_jpcc_2025.png" class="active" />
-        <img src="publication_images/tyagi_pccp_2025.png" />
-        <img src="publication_images/ghosal_jcp_2026.png" />
+        <img src="publication_images/chellam_jpcc_2025.png" class="active">
+        <img src="publication_images/tyagi_pccp_2025.png">
+        <img src="publication_images/ghosal_jcp_2026.png">
       </div>
+      <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
       <p><a href="publications.html">Go to Publications →</a></p>
     </div>
 
   </div>
 </main>
 
-<footer>© 2026 Abhisek Ghosal</footer>
+<footer>© 2026 Abhiek Ghosal</footer>
 
 <script>
 const slideIndex = {};
 
+// Show a specific slide
 function showSlide(teaserId, n) {
   const teaser = document.getElementById(teaserId);
   const slides = teaser.querySelectorAll('.slides img');
-  slides.forEach(s => s.classList.remove('active'));
   slideIndex[teaserId] = (n + slides.length) % slides.length;
-  slides[slideIndex[teaserId]].classList.add('active');
+  slides.forEach((img, i) => img.classList.toggle('active', i === slideIndex[teaserId]));
 }
 
-function nextSlide(teaserId) {
-  showSlide(teaserId, (slideIndex[teaserId] || 0) + 1);
-}
+// Next / Previous
+function nextSlide(teaserId) { showSlide(teaserId, (slideIndex[teaserId] || 0) + 1); }
+function prevSlide(teaserId) { showSlide(teaserId, (slideIndex[teaserId] || 0) - 1); }
 
-function prevSlide(teaserId) {
-  showSlide(teaserId, (slideIndex[teaserId] || 0) - 1);
-}
-
+// Auto slideshow
 function startSlideshow(teaserId) {
-  slideIndex[teaserId] = 0;
-  setInterval(() => nextSlide(teaserId), 3500);
+  const teaser = document.getElementById(teaserId);
+  const slides = teaser.querySelectorAll('.slides img');
+  let index = 0;
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+    slideIndex[teaserId] = index;
+  }, 3500);
 }
 
-// Start slideshows
 startSlideshow('research-teaser');
 startSlideshow('pub-teaser');
 </script>
