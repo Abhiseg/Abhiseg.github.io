@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>[[Your Name]] | Academic Homepage</title>
+  <title>Abhisek Ghosal | Academic Homepage</title>
 
   <style>
     body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
     header { background: #1f2937; color: white; padding: 2.5rem 1rem; text-align: center; }
     header h1 { margin: 0; font-size: 2.5rem; }
     header p { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; }
-    main { max-width: 900px; margin: 3rem auto; padding: 0 1.5rem; text-align: center; }
+    main { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; text-align: center; }
     img.profile { width: 200px; border-radius: 50%; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
-    .description { margin-top: 2rem; font-size: 1.05rem; line-height: 1.6; }
+    
+    /* Short description styled */
+    .description {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #374151;
+    }
+    .description span { font-style: italic; color: #1f2937; font-weight: 500; }
+    .description span { font-style: italic; color: #1f2937; }
 
     /* Section headers as separate colored blocks */
     .sections { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
@@ -28,14 +37,51 @@
     .sections a:hover { background-color: #374151; }
 
     footer { margin-top: 4rem; padding: 1.2rem; text-align: center; font-size: 0.9rem; color: #555; }
+     
 
     /* Grid for Research & Publications teaser */
-    .teaser-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: start; }
+    .teaser-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; align-items: start; }
     .teaser { border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.12); overflow: hidden; position: relative; height: 520px; }
     .teaser img { width: 100%; position: absolute; opacity: 0; transition: opacity 1s; height: 100%; object-fit: cover; }
     .teaser img.active { opacity: 1; }
     .teaser h3 { margin: 0; padding: 0.6rem; background-color: #1f2937; color: white; }
     .teaser a { display: inline-block; margin: 0.6rem; color: #1f2937; font-weight: bold; }
+    /* Slideshow arrows (like Diptarka Hait) */
+    .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 4px;
+    }
+    .arrow:hover { background: rgba(0,0,0,0.8); }
+    .arrow.left { left: 8px; }
+    .arrow.right { right: 8px; }
+    
+    /* Slideshow arrows */
+    .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.7rem;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 4px;
+    }
+    .arrow:hover { background: rgba(0,0,0,0.8); }
+    .arrow.left { left: 8px; }
+    .arrow.right { right: 8px; }
+
   </style>
 </head>
 <body>
@@ -59,37 +105,30 @@
   <img src="abhisek_photo.jpg" alt="Abhisek Ghosal" class="profile" />
 
   <!-- Short description -->
-  <p class="description">I am a physical chemist specializing in quantum-chemistry approaches to chemical problems. In the spirit of the uncertainty principle, I am currently located at \color Northwestern University, with research momentum extending globally.My research focuses on the development of new theoretical frameworks, computational methodologies, and efficient algorithms to address fundamental and applied challenges in chemistry, with the aim of achieving experimental-level chemical accuracy.</p>
-
+  <p class="description">I am a physical chemist specializing in <span>quantum-chemistry approaches</span> to chemical problems.<br> In the spirit of the uncertainty principle, I am currently located at <span>Northwestern University</span>, with research momentum extending globally.<br> My research focuses on the development of new <span>theoretical frameworks, computational methodologies,</span> and efficient algorithms to address fundamental and applied challenges in chemistry, with the aim of achieving <span>experimental-level chemical accuracy</span>.</p>
   <!-- Split teaser: Research & Publications -->
   <div class="teaser-grid">
-
-    <!-- Research teaser -->
+  
     <div class="teaser" id="research-teaser">
+      <button class="arrow left" onclick="prevSlide('research-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('research-teaser')">&#10095;</button>
+      <button class="arrow left" onclick="prevSlide('research-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('research-teaser')">&#10095;</button>
       <h3>Research Interests</h3>
       <img src="images/research1.jpg" class="active" />
       <img src="images/research2.jpg" />
       <img src="images/research3.jpg" />
       <p><a href="research.html">Go to Research →</a></p>
     </div>
-
-    <!-- Publications teaser -->
+  
     <div class="teaser" id="pub-teaser">
+      <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
+      <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
+      <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
       <h3>Publications</h3>
-      <img src="publication_images/ghosal_adp_2016.pdf" class="active" />
-      <img src="publication_images/ghosal_ijqc_2018.pdf" />
-      <img src="publication_images/mandal_tca_2019.pdf" />
-      <img src="publication_images/ghosal_jcp_2019.pdf" />
-      <img src="publication_images/ghosal_fd_2020.pdf" />
-      <img src="publication_images/ghosal_tca_2021.pdf" />
-      <img src="publication_images/roy_chemistry_2021.pdf" />
-      <img src="publication_images/ghosal_mp_2022.pdf" />
-      <img src="publication_images/roy_jpca_2022.pdf" />
-      <img src="publication_images/ghosal_cpl_2022.pdf" />
-      <img src="publication_images/ghosal_jcpl_2024.pdf" />
-      <img src="publication_images/tyagi_pccp_2025.pdf" />
-      <img src="publication_images/chellam_jpcc_2025.pdf" />
-      <img src="publication_images/ghosal_jcp_2026.pdf" />
+      <img src="publication_images/chellam_jpcc_2025.png" class="active" />
+      <img src="publication_images/tyagi_pccp_2025.png" />
       <img src="publication_images/ghosal_jcp_2026.png" />
       <p><a href="publications.html">Go to Publications →</a></p>
     </div>
@@ -99,18 +138,48 @@
 
 <footer>© [2026] [Abhisek Ghosal]</footer>
 
-<!-- JS for simultaneous slideshow -->
 <script>
-function startSlideshow(teaserId) {
+const slideIndex = {};
+
+function showSlide(teaserId, n) {
   const teaser = document.getElementById(teaserId);
   const slides = teaser.querySelectorAll('img');
-  let index = 0;
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, 3500);
+  slides.forEach(s => s.classList.remove('active'));
+  slideIndex[teaserId] = (n + slides.length) % slides.length;
+  slides[slideIndex[teaserId]].classList.add('active');
 }
+
+function nextSlide(teaserId) {
+  showSlide(teaserId, (slideIndex[teaserId] || 0) + 1);
+}
+
+function prevSlide(teaserId) {
+  showSlide(teaserId, (slideIndex[teaserId] || 0) - 1);
+}
+
+const slideIndex = {};
+
+function showSlide(teaserId, n) {
+  const teaser = document.getElementById(teaserId);
+  const slides = teaser.querySelectorAll('img');
+  slides.forEach(s => s.classList.remove('active'));
+  slideIndex[teaserId] = (n + slides.length) % slides.length;
+  slides[slideIndex[teaserId]].classList.add('active');
+}
+
+function nextSlide(teaserId) {
+  showSlide(teaserId, (slideIndex[teaserId] || 0) + 1);
+}
+
+function prevSlide(teaserId) {
+  showSlide(teaserId, (slideIndex[teaserId] || 0) - 1);
+}
+
+function startSlideshow(teaserId) {
+  slideIndex[teaserId] = 0;
+  setInterval(() => nextSlide(teaserId), 3500);
+}
+
 
 startSlideshow('research-teaser');
 startSlideshow('pub-teaser');
