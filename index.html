@@ -4,100 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Abhisek Ghosal | Academic Homepage</title>
-
-<style>
-body { font-family: Arial, Helvetica, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
-header { background: #1f2937; color: white; padding: 2.5rem 1rem; text-align: center; }
-header h1 { margin: 0; font-size: 2.5rem; }
-header p { margin-top: 0.6rem; font-size: 1.1rem; opacity: 0.9; }
-main { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; text-align: center; }
-img.profile { width: 200px; border-radius: 50%; box-shadow: 0 6px 16px rgba(0,0,0,0.18); }
-
-/* Description styling */
-.description { margin-top: 2rem; font-size: 1.1rem; line-height: 1.6; color: #374151; }
-.description span { font-style: italic; color: #1f2937; font-weight: 500; }
-
-/* Section headers */
-.sections { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
-.sections a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  padding: 0.8rem 1.5rem;
-  background-color: #1f2937;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-}
-.sections a:hover { background-color: #374151; }
-
-footer { margin-top: 4rem; padding: 1.2rem; text-align: center; font-size: 0.9rem; color: #555; }
-
-/* Teaser grid */
-.teaser-grid { margin-top: 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2.5rem; }
-
-/* Teaser heading above slideshow */
-.teaser-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.5rem;
-  background-color: #1f2937;
-  color: white;
-  padding: 0.5rem 0.8rem;
-  border-radius: 6px 6px 0 0;
-}
-.teaser-header h3 { margin: 0; font-size: 1.1rem; }
-.teaser-header a { color: #fff; text-decoration: none; font-weight: bold; }
-.teaser-header a:hover { color: #d1d5db; }
-
-/* Teaser box */
-.teaser {
-  position: relative;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-  overflow: hidden;
-  background: #fafafa;
-}
-
-/* Slides container inside teaser */
-.teaser .slides {
-  position: relative;
-  width: 100%;
-  height: 360px; /* fixed height for consistent aspect ratio */
-  overflow: hidden;
-}
-
-.teaser .slides img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-
-.teaser .slides img.active { opacity: 1; }
-
-/* Arrows inside slides */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: white;
-  border: none;
-  font-size: 1.5rem;
-  padding: 0.4rem 0.7rem;
-  cursor: pointer;
-  z-index: 5;
-  border-radius: 4px;
-}
-.arrow.left { left: 8px; }
-.arrow.right { right: 8px; }
-.arrow:hover { background: rgba(0,0,0,0.8); }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -121,7 +28,9 @@ footer { margin-top: 4rem; padding: 1.2rem; text-align: center; font-size: 0.9re
   <p class="description">
    I am a physical chemist specializing in <span>quantum-chemistry approaches</span> to chemical problems.<br>
    In the spirit of the uncertainty principle, I am currently located at <span>Northwestern University</span>, with research momentum extending globally.<br>
-   <!--My research centers on developing and applying advanced <span>theoretical frameworks, computational methodologies,</span> to tackle fundamental problems in chemical physics and quantum chemistry, with the long-term goal of achieving <span>high-accuracy</span> predictions that can reliably guide and interpret experimental observations.-->
+   <!--My research centers on developing and applying advanced <span>theoretical frameworks, computational methodologies,</span> to tackle fundamental problems 
+	   in chemical physics and quantum chemistry, with the long-term goal of achieving <span>high-accuracy</span> predictions that can reliably guide and 
+	   interpret experimental observations.-->
     </p>
 
   <div class="teaser-grid">
