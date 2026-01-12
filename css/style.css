@@ -171,3 +171,12 @@ footer {
   background: rgba(0,0,0,0.8);
 }
 
+.home-link {
+  color: white;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
