@@ -1,128 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abhisek Ghosal | Academic Homepage</title>
-<link rel="stylesheet" href="css/style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhisek Ghosal | Academic Homepage</title>
 
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
 <body>
 
-<header>
-  <h1><a href="index.html" class="home-link">Abhisek Ghosal</a></h1>  
-  <p>A theoretical and computational chemist</p>
+<header class="navbar">
+  <div class="logo-section">
+    <h1 class="logo">ABHISEK GHOSAL</h1>
+    <p class="tagline">A THEORETICAL AND COMPUTATIONAL CHEMIST</p>
+  </div>
+
+  <nav>
+    <ul class="nav-links">
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="research.html">RESEARCH</a></li>
+      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 </header>
 
-<main>
-  <div class="sections">
-    <a href="about.html">About Me</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-  </div>
+<section class="hero">
+  <div class="overlay"></div>
 
-  <div class ="profile_wrapper">
-    <img src="abhisek_profile_photo.png" alt="Abhisek Ghosal" class="profile">
-  </div>
+  <div class="hero-content">
+    <h2>ABHISEK GHOSAL</h2>
+    <h3>A THEORETICAL AND COMPUTATIONAL CHEMIST</h3>
 
-  <p class="description">
-   I am a physical chemist specializing in <span>quantum-chemistry approaches</span> to chemical problems.<br>
-   In the spirit of the uncertainty principle, I am currently located at <span>Northwestern University</span>, with research momentum extending globally.<br>
-   <!--My research centers on developing and applying advanced <span>theoretical frameworks, computational methodologies,</span> to tackle fundamental problems 
-	   in chemical physics and quantum chemistry, with the long-term goal of achieving <span>high-accuracy</span> predictions that can reliably guide and 
-	   interpret experimental observations.-->
+    <div class="line"></div>
+
+    <p>
+      I am a physical chemist specializing in quantum-chemistry
+      approaches to chemical problems.
     </p>
 
-  <div class="teaser-grid">
+    <p>
+      In the spirit of the uncertainty principle, I am currently located at
+      <span>Northwestern University</span>, with research momentum extending globally.
+    </p>
+  </div>
+</section>
 
-    <!-- Research teaser -->
-    <div class="teaser" id="research-teaser">
-      <div class="teaser-header">
-        <h3>Research Interests</h3>
-        <a href="research.html">Go to Research →</a>
-      </div>
-      <div class="slides">
-        <img src="research_images/RI_1.png" class="active">
-        <img src="research_images/RI_2.png">
-        <img src="research_images/RI_3.png">
-        <img src="research_images/RI_4.png">
-        <img src="research_images/RI_6.png">
-        <img src="research_images/RI_5.png">
-        <button class="arrow left" onclick="prevSlide('research-teaser')">&#10094;</button>
-        <button class="arrow right" onclick="nextSlide('research-teaser')">&#10095;</button>
-      </div>
+<section class="cards-section">
+
+  <div class="card">
+
+    <div class="card-header">
+      <h2>RESEARCH INTERESTS</h2>
+      <a href="research.html">Go to Research →</a>
     </div>
 
-    <!-- Publications teaser -->
-    <div class="teaser" id="pub-teaser">
-      <div class="teaser-header">
-        <h3>Publications</h3>
-        <a href="publications.html">Go to Publications →</a>
-      </div>
-      <div class="slides">
-        <img src="publication_images/ghosal_jcp_2026.png" class="active">
-        <img src="publication_images/chellam_jpcc_2025.png">
-        <img src="publication_images/tyagi_pccp_2025.png">
-        <img src="publication_images/ghosal_jpcl_2024.png">
-        <img src="publication_images/ghosal_cpl_2022.png">
-        <img src="publication_images/roy_jpca_2022.png">
-        <img src="publication_images/ghosal_mp_2022.png">
-        <img src="publication_images/roy_chemistry_2021.png">
-        <img src="publication_images/ghosal_tca_2021.png">
-        <img src="publication_images/ghosal_fd_2020.png">
-        <img src="publication_images/ghosal_jcp_2019.png">
-        <img src="publication_images/mandal_tca_2019.png">
-        <img src="publication_images/ghosal_ijqc_2018.png">
-        <img src="publication_images/ghosal_adp_2016.png">
-        <button class="arrow left" onclick="prevSlide('pub-teaser')">&#10094;</button>
-        <button class="arrow right" onclick="nextSlide('pub-teaser')">&#10095;</button>
-      </div>
+    <img src="images/research.jpg" alt="Research">
+
+    <div class="card-body">
+      <p>
+        Electronic structure theory, excited-state dynamics,
+        autoionization processes, density functional theory,
+        TDDFT, and quantum embedding methods.
+      </p>
     </div>
 
   </div>
-</main>
 
-<footer>© 2026 Abhisek Ghosal</footer>
+  <div class="card">
+    <div class="card-header">
+      <h2>PUBLICATIONS</h2>
+      <a href="publications.html">Go to Publications →</a>
+    </div>
 
-<script>
-// Manage slide index per teaser
-const slideIndex = {};
+    <img src="images/publication.jpg" alt="Publications">
 
-function showSlide(teaserId, n) {
-  const teaser = document.getElementById(teaserId);
-  const slides = teaser.querySelectorAll('.slides img');
-  slides.forEach(s => s.classList.remove('active'));
-  slideIndex[teaserId] = (n + slides.length) % slides.length;
-  slides[slideIndex[teaserId]].classList.add('active');
-}
+    <div class="card-body">
+      <p>
+        Explore recent publications on excited-state theory,
+        quantum dynamics, density-functional methods,
+        and non-Hermitian quantum chemistry.
+      </p>
+    </div>
 
-function nextSlide(teaserId) {
-  showSlide(teaserId, (slideIndex[teaserId] || 0) + 1);
-}
+  </div>
 
-function prevSlide(teaserId) {
-  showSlide(teaserId, (slideIndex[teaserId] || 0) - 1);
-}
+</section>
 
-// Automatic slideshow
-function startSlideshow(teaserId) {
-  const teaser = document.getElementById(teaserId);
-  const slides = teaser.querySelectorAll('.slides img');
-  let index = 0;
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-    slideIndex[teaserId] = index;
-  }, 3500);
-}
+<footer>
+  <p>© 2026 Abhisek Ghosal | Northwestern University</p>
+</footer>
 
-startSlideshow('research-teaser');
-startSlideshow('pub-teaser');
-</script>
-
+<script src="js/main.js"></script>
 </body>
-</html>
-
+</html>    

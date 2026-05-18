@@ -1,0 +1,259 @@
+body {
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #243b53;
+  color: #f7f7f5;
+  line-height: 1.6;
+}
+
+header {
+  background: #243b53;
+  color: #f7f7f5;
+  padding: 4rem 1rem 2.5rem;
+  text-align: center;
+  border-bottom: 1px solid #d9e2ec;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-top: 0.6rem;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+main {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+/*
+img.profile {
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+*/
+
+/*
+img.profile {
+img.profile {
+  width: 240px;
+  height: auto;
+  border-radius: 10px;            
+  box-shadow: 0 10px 24px rgba(0,0,0,0.20);
+  background: white;
+}
+
+img.profile {
+  image-rendering: auto;
+}
+
+.profile-wrapper {
+  margin: 2.5rem auto 1.5rem;
+  text-align: center;
+}
+*/
+
+/* Homepage profile picture styling */
+img.profile {
+  width: 260px;               /* slightly larger */
+  height: auto;
+  border-radius: 12px;        /* soft rectangle, not full circle */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.22);
+  object-fit: cover;          /* ensures image fills box nicely */
+  border: 4px solid #fff;     /* subtle white border for contrast */
+  filter: contrast(1.05) brightness(1.03);
+}
+
+.profile-wrapper {
+  text-align: center;
+  margin: 3rem auto 2rem;
+}
+
+img.profile {
+  background: #f9fafb;
+  padding: 8px;
+}
+
+/* Description */
+.description {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #374151;
+}
+
+.description span {
+  font-style: italic;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+/* Navigation buttons */
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.sections a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  background-color: #1f2937;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.sections a:hover {
+  background-color: #374151;
+}
+
+/* Footer */
+footer {
+  margin-top: 4rem;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Teaser grid */
+.teaser-grid {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2.5rem;
+}
+
+/* Teaser header */
+.teaser-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  background-color: #1f2937;
+  color: white;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px 6px 0 0;
+}
+
+.teaser-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.teaser-header a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.teaser-header a:hover {
+  color: #d1d5db;
+}
+
+/* Teaser box */
+.teaser {
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  overflow: hidden;
+  background: #fafafa;
+}
+
+/* Slides */
+.teaser .slides {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+}
+
+.teaser .slides img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.teaser .slides img.active {
+  opacity: 1;
+}
+
+/* Arrows */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 4px;
+}
+
+.arrow.left { left: 8px; }
+.arrow.right { right: 8px; }
+
+.arrow:hover {
+  background: rgba(0,0,0,0.8);
+}
+
+.home-link {
+  color: white/div;
+  text-decoration: none;
+}
+
+.home-link:hover {
+  text-decoration: underline;
+}
+
+/* About section: two columns */
+.about-container {
+  display: flex;
+  flex-wrap: wrap; /* wrap on small screens */
+  gap: 2rem;
+  max-width: 900px;
+  margin: 3rem auto;
+  align-items: flex-start;
+}
+
+.about-left {
+  flex: 0 0 200px; /* fixed image column width */
+}
+
+.profile-left {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #374151;
+}
+
+.about-text span {
+  color: #1f2937; /* darker tone for highlights */
+  font-weight: 500;
+}
+
