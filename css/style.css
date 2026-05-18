@@ -121,7 +121,7 @@ body {
 .hero-image {
   width: 380px;
   height: 480px;
-  background: url("../images/hero.jpeg") center/cover no-repeat;
+  background: url("../images/abhisek_profile_photo.png") center/cover no-repeat;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
