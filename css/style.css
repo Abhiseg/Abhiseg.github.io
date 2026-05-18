@@ -2,14 +2,14 @@ body {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f7f7f5;
-  color: #243b53;
+  background: #243b53;
+  color: #f7f7f5;
   line-height: 1.6;
 }
 
 header {
-  background: #f7f7f5;
-  color: #243b53;
+  background: #243b53;
+  color: #f7f7f5;
   padding: 4rem 1rem 2.5rem;
   text-align: center;
   border-bottom: 1px solid #d9e2ec;
