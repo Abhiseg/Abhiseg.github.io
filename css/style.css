@@ -7,10 +7,9 @@
 :root {
   --nw-purple: #4E2A84;
   --accent: #6F4BB8;
-  --light-bg: #ffffff;
   --text: #1a1a1a;
   --muted: #555;
-  --card-border: #e6e6e6;
+  --border: #e6e6e6;
 }
 
 /* =========================
@@ -19,13 +18,13 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: var(--light-bg);
+  background: #ffffff;
   color: var(--text);
   line-height: 1.7;
 }
 
 /* =========================
-   NAVBAR (keep identity)
+   NAVBAR (KEEP PURPLE IDENTITY)
 ========================= */
 
 .navbar {
@@ -69,60 +68,62 @@ body {
 }
 
 /* =========================
-   HERO (FIXED IMAGE ISSUE)
+   HERO (WHITE + PROFILE IMAGE)
 ========================= */
 
 .hero {
   height: 100vh;
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 100px;
-
-  /* IMPORTANT FIX */
-  background: url("../images/hero.jpeg") center/cover no-repeat;
+  background: #ffffff;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(78, 42, 132, 0.55);
-}
-
+/* LEFT TEXT */
 .hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 750px;
+  max-width: 650px;
 }
 
 .hero-content h2 {
-  font-size: 4.5rem;
-  color: #fff;
+  font-size: 4.8rem;
+  color: var(--nw-purple);
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .hero-content h3 {
   font-size: 1.8rem;
-  color: #f3f0ff;
+  color: #333;
   font-weight: 400;
+  letter-spacing: 1px;
 }
 
 .hero-content p {
   font-size: 1.2rem;
-  color: #f3f0ff;
-  margin-top: 10px;
+  color: var(--muted);
+  margin-top: 15px;
 }
 
 .hero-content span {
-  color: #d7c7ff;
-  font-weight: 700;
+  color: var(--accent);
+  font-weight: 600;
 }
 
 .line {
   width: 140px;
   height: 5px;
-  background: #d7c7ff;
+  background: var(--nw-purple);
   margin: 25px 0;
+}
+
+/* RIGHT IMAGE (IMPORTANT) */
+.hero-image {
+  width: 380px;
+  height: 480px;
+  background: url("../images/hero.jpeg") center/cover no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
 }
 
 /* =========================
@@ -136,14 +137,13 @@ body {
   padding: 80px 100px;
 }
 
-/* CLEAN WHITE ACADEMIC CARDS */
+/* CLEAN ACADEMIC CARDS */
 .card {
   background: #fff;
-  border: 1px solid var(--card-border);
+  border: 1px solid var(--border);
   border-radius: 14px;
-  overflow: hidden;
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
 .card:hover {
@@ -195,9 +195,6 @@ footer {
 ========================= */
 
 @media (max-width: 1100px) {
-  .navbar {
-    padding: 15px 40px;
-  }
 
   .hero {
     padding: 0 50px;
@@ -206,28 +203,35 @@ footer {
   .hero-content h2 {
     font-size: 3.5rem;
   }
+
+  .hero-image {
+    width: 320px;
+    height: 420px;
+  }
 }
 
 @media (max-width: 768px) {
+
   .navbar {
     flex-direction: column;
     gap: 10px;
     padding: 15px;
   }
 
-  .nav-links {
-    gap: 18px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
   .hero {
-    padding: 0 25px;
+    flex-direction: column;
     text-align: center;
+    gap: 40px;
+    padding: 120px 25px 60px;
   }
 
   .hero-content h2 {
     font-size: 2.8rem;
+  }
+
+  .hero-image {
+    width: 280px;
+    height: 360px;
   }
 
   .cards-section {
