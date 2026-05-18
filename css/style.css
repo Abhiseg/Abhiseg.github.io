@@ -88,7 +88,7 @@ img {
 
 .hero {
   height: 100vh;
-  background: url('../images/hero.jpg') center/cover no-repeat;
+  background: url('../images/hero.jpeg') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -98,7 +98,7 @@ img {
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(78, 42, 132, 0.6);
+  background: rgba(78, 42, 132, 0.65);
 }
 
 .hero-content {
@@ -109,7 +109,7 @@ img {
 
 .hero-content h2 {
   font-size: 2rem;
-  color: var(--offwhite);
+  color: #F5F2E8;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -117,13 +117,14 @@ img {
 .hero-content h3 {
   font-size: 2rem;
   font-weight: 400;
-  color: rgba(245, 242, 232, 0.85);
+  color:  #F5F2E8;
   letter-spacing: 2px;
 }
 
 .hero-content p {
   font-size: 1.3rem;
-  color: rgba(245, 242, 232, 0.85);
+  color:  #F5F2E8;
+  opacity: 0.9;
   margin-bottom: 20px;
 }
 
@@ -152,11 +153,12 @@ img {
 
 /* glass-style academic cards */
 .card {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(245, 242, 232, 0.12);
   border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px var(--shadow);
-  backdrop-filter: blur(12px);
+  overflow: hidden; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
   transition: transform 0.3s ease;
 }
 
@@ -173,13 +175,13 @@ img {
 }
 
 .card-header h2 {
-  color: var(--offwhite);
+  color: #F5F2E8;
   font-size: 1.8rem;
 }
 
 .card-header a {
   text-decoration: none;
-  color: var(--accent);
+  color: #C8B6FF;
   font-weight: 600;
 }
 
