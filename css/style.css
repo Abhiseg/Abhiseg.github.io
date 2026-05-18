@@ -119,7 +119,7 @@ body {
 
 /* RIGHT IMAGE (IMPORTANT) */
 .hero-image {
-  width: 380px;
+  width: 480px;
   height: 480px;
   background: url("../images/abhisek_profile_photo.png") center/cover no-repeat;
   border-radius: 20px;
