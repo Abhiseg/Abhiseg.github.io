@@ -103,6 +103,9 @@ body {
   font-size: 1.2rem;
   color: var(--muted);
   margin-top: 15px;
+
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .hero-content span {
