@@ -12,3 +12,31 @@ window.addEventListener('scroll', () => {
   }
 
 });
+
+function nextSlide(id) {
+  const container = document.getElementById(id);
+  const images = container.querySelectorAll("img");
+
+  let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
+
+  images[activeIndex].classList.remove("active");
+
+  activeIndex = (activeIndex + 1) % images.length;
+
+  images[activeIndex].classList.add("active");
+}
+
+function prevSlide(id) {
+  const container = document.getElementById(id);
+  const images = container.querySelectorAll("img");
+
+  let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
+
+  images[activeIndex].classList.remove("active");
+
+  activeIndex = (activeIndex - 1 + images.length) % images.length;
+
+  images[activeIndex].classList.add("active");
+}
+
+

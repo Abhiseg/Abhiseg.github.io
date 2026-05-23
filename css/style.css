@@ -283,6 +283,8 @@ img {
 
   overflow: hidden;
 
+  position: relative;
+
   box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 
   display: flex;
@@ -298,6 +300,7 @@ img {
 }
 
 .card p,
+
 .card li {
   color: var(--muted);
   line-height: 1.8;
@@ -334,7 +337,7 @@ img {
   font-weight: 600;
 }
 
-.card img {
+.card > img {
 
   width: 100%;
 
@@ -373,11 +376,20 @@ img {
 
 .slides {
   position: relative;
+
   width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
+
+  aspect-ratio: 16 / 9;
+
+  min-height: 220px;
+
   overflow: hidden;
-  border-radius: 0;
+
+  border-radius: 12px;
+}
+
+.slides {
+  z-index: 1;
 }
 
 /* all images stacked */
@@ -392,6 +404,10 @@ img {
 
   opacity: 0;
   transition: opacity 0.6s ease;
+}
+
+.slides img {
+  display: block;
 }
 
 /* active slide */
