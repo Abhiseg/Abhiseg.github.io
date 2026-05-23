@@ -19,6 +19,9 @@ function nextSlide(id) {
 
   let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
 
+  // safety fallback
+  if (activeIndex === -1) activeIndex = 0;
+
   images[activeIndex].classList.remove("active");
 
   activeIndex = (activeIndex + 1) % images.length;
@@ -32,11 +35,12 @@ function prevSlide(id) {
 
   let activeIndex = [...images].findIndex(img => img.classList.contains("active"));
 
+  if (activeIndex === -1) activeIndex = 0;
+
   images[activeIndex].classList.remove("active");
 
   activeIndex = (activeIndex - 1 + images.length) % images.length;
 
   images[activeIndex].classList.add("active");
 }
-
 
