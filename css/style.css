@@ -1,8 +1,16 @@
+/* =========================================
+   GLOBAL RESET
+========================================= */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
+/* =========================================
+   ROOT COLORS
+========================================= */
 
 :root {
   --nw-purple: #4E2A84;
@@ -12,83 +20,121 @@
   --border: #e6e6e6;
 }
 
-/* =========================
+/* =========================================
    BASE
-========================= */
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
   background: #ffffff;
   color: var(--text);
   line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* =========================
-   NAVBAR (KEEP PURPLE IDENTITY)
-========================= */
+/* Prevent overflow issues */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
 
 .navbar {
   position: fixed;
   top: 0;
+  left: 0;
+
   width: 100%;
+
   background: var(--nw-purple);
+
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 18px 80px;
+
   z-index: 999;
+
   box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .logo {
-  color: #fff;
+  color: #ffffff;
   font-size: 2rem;
   font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .tagline {
   color: rgba(255,255,255,0.8);
   font-size: 0.85rem;
+  margin-top: 2px;
 }
 
 .nav-links {
   display: flex;
   gap: 35px;
   list-style: none;
+
+  flex-wrap: wrap;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
+  color: #ffffff;
   font-weight: 600;
+  transition: 0.25s ease;
 }
 
 .nav-links a:hover {
   color: #d7c7ff;
 }
 
-/* =========================
-   HERO (WHITE + PROFILE IMAGE)
-========================= */
+/* =========================================
+   HERO SECTION
+========================================= */
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 100px;
+
+  gap: 70px;
+
+  padding: 120px 100px 60px;
+
   background: #ffffff;
+
+  flex-wrap: wrap;
 }
 
-/* LEFT TEXT */
+/* LEFT SIDE */
+
 .hero-content {
-  max-width: 650px;
+  flex: 1 1 550px;
+  min-width: 280px;
+  max-width: 700px;
 }
 
 .hero-content h2 {
   font-size: 4.8rem;
   color: var(--nw-purple);
   font-weight: 700;
+  line-height: 1.1;
   margin-bottom: 10px;
 }
 
@@ -100,12 +146,13 @@ body {
 }
 
 .hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   color: var(--muted);
-  margin-top: 15px;
+
+  margin-top: 20px;
+
   line-height: 1.9;
 
-  max-width: 650px;
   width: 100%;
 
   text-align: justify;
@@ -122,133 +169,18 @@ body {
   height: 5px;
   background: var(--nw-purple);
   margin: 25px 0;
+  border-radius: 10px;
 }
 
-/* RIGHT IMAGE (IMPORTANT) */
+/* RIGHT IMAGE */
+
 .hero-image {
-  width: 680px;
+  flex: 1 1 380px;
+
+  width: 100%;
+  max-width: 680px;
+
   height: 480px;
-  background: url("../images/abhisek_profile_photo.png") center/cover no-repeat;
-  border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-}
 
-/* =========================
-   RESEARCH / PUBLICATIONS
-========================= */
-
-.cards-section {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: 40px;
-  padding: 80px 100px;
-}
-
-/* CLEAN ACADEMIC CARDS */
-.card {
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  transition: transform 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
-}
-
-.card-header {
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card-header h2 {
-  color: var(--nw-purple);
-  font-size: 1.5rem;
-}
-
-.card-header a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.card-body {
-  padding: 20px;
-}
-
-.card-body p {
-  color: var(--muted);
-  font-size: 1.05rem;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-  text-align: center;
-  padding: 30px;
-  background: #fafafa;
-  border-top: 1px solid #eee;
-  color: #666;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1100px) {
-
-  .hero {
-    padding: 0 50px;
-  }
-
-  .hero-content h2 {
-    font-size: 3.5rem;
-  }
-
-  .hero-image {
-    width: 320px;
-    height: 420px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .navbar {
-    flex-direction: column;
-    gap: 10px;
-    padding: 15px;
-  }
-
-  .hero {
-  flex-direction: column;
-  gap: 40px;
-  padding: 120px 25px 60px;
-}
-
-.hero-content {
-  text-align: left;
-}
-
-.hero-content p {
-  text-align: justify;
-}
-
-  .hero-content h2 {
-    font-size: 2.8rem;
-  }
-
-  .hero-image {
-    width: 280px;
-    height: 360px;
-  }
-
-  .cards-section {
-    padding: 40px 20px;
-  }
-}
+  background: url("../images/abhisek_profile_photo.png")
+              center/cover no
