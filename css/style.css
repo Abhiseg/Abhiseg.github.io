@@ -792,3 +792,46 @@ img {
 
   line-height: 1.8;
 }
+
+/* =========================================
+   RESEARCH VISION
+========================================= */
+
+.research-vision {
+
+  margin-top: 40px;
+
+  padding: 30px 35px;
+
+  background: #fafafa;
+
+  border-left: 5px solid var(--nw-purple);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 6px 18px rgba(0,0,0,0.04);
+}
+
+.research-vision p {
+
+  margin-bottom: 18px;
+
+  line-height: 1.9;
+
+  color: var(--muted);
+
+  text-align: justify;
+}
+
+.research-vision p:last-child {
+
+  margin-bottom: 0;
+}
+
+.research-vision span {
+
+  color: var(--accent);
+
+  font-weight: 600;
+}
