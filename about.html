@@ -1,77 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF‑8" />
-  <meta name="viewport" content="width=device‑width,initial‑scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>About | Abhisek Ghosal</title>
-  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-<header>
-  <h1><a href="index.html" class="home-link">Abhisek Ghosal</a></h1>
-  <p>A theoretical and computational chemist</p>
-</header>
+<header class="navbar">
 
-<main>
+  <div class="logo-section">
+    <h1 class="logo">
+      <a href="index.html" style="color:white; text-decoration:none;">
+        ABHISEK GHOSAL
+      </a>
+    </h1>
 
-  <div class="sections">
-    <a href="about.html" class="active">About Me</a>
-    <a href="research.html">Research</a>
-    <a href="publications.html">Publications</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
+    <p class="tagline">
+      THEORETICAL & COMPUTATIONAL CHEMIST
+    </p>
   </div>
 
-  <section class="about-container">
+  <nav>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">ABOUT</a></li>
+      <li><a href="research.html">RESEARCH</a></li>
+      <li><a href="publications.html">PUBLICATIONS</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">CONTACT</a></li>
+    </ul>
+  </nav>
 
-    <!-- Left column: portrait -->
-    <div class="about-left">
-      <img src="abhisek_photo.jpg" alt="Abhisek Ghosal" class="profile-left" />
-    </div>
+</header>
 
-    <!-- Right column: text -->
-    <div class="about-text">
-      <p>
-        I am a theoretical and computational chemist specializing in
-        <span>quantum‑chemistry approaches</span> to tackle challenging problems
-        in chemical physics. My work aims to bridge
-        <span>method development</span> and
-        <span>experimentally observable phenomena</span>.
-      </p>
+<!-- =========================================
+     ABOUT SECTION
+========================================= -->
 
-      <p>
-        I completed my doctoral research at <span>IISER Kolkata</span>, focusing
-        on Density Functional Theory (DFT) and Time‑Dependent DFT (TDDFT). I
-        was the lead developer of <span>InDFT</span>, an in‑house code for
-        modeling atoms and molecules with low‑scaling techniques.
-      </p>
+<section class="about-page">
 
-      <p>
-        As a postdoctoral researcher at <span>TIFR Mumbai</span>, I explored
-        non‑Hermitian quantum mechanics to study <span>negative ion resonances</span>
-        and complex absorbing potentials. Currently, I am a research fellow at
-        <span>Northwestern University</span>, investigating
-        <span>auto‑ionizing excited states</span> and their spectroscopic
-        signatures.
-      </p>
+  <!-- IMAGE -->
 
-      <p>My research interests include:</p>
+  <div class="about-image">
+
+    <img src="images/abhisek_profile_photo.png"
+         alt="Abhisek Ghosal">
+
+  </div>
+
+  <!-- CONTENT -->
+
+  <div class="about-content">
+
+    <h2>About Me</h2>
+
+    <div class="line"></div>
+
+    <p>
+      I am a theoretical and computational chemist specializing in
+      quantum chemistry and electronic structure theory, with a strong
+      interest in developing theoretical frameworks, computational
+      methodologies, and efficient algorithms for chemically relevant
+      quantum many-body problems.
+    </p>
+
+    <p>
+      I completed my doctoral research at
+      <span>IISER Kolkata</span>,
+      where I worked extensively on Density Functional Theory (DFT)
+      and Time-Dependent Density Functional Theory (TDDFT).
+      During this period, I served as the lead developer of
+      <span>InDFT</span>,
+      an in-house electronic structure package designed for
+      efficient atomistic and molecular simulations.
+    </p>
+
+    <p>
+      As a postdoctoral researcher at
+      <span>TIFR Mumbai</span>,
+      I explored non-Hermitian quantum mechanics,
+      complex absorbing potential approaches,
+      and negative ion resonances.
+    </p>
+
+    <p>
+      Currently, I am a research fellow at
+      <span>Northwestern University</span>,
+      where my research focuses on autoionizing excited states,
+      advanced spectroscopy simulations,
+      and scalable many-body electronic structure methods.
+    </p>
+
+    <!-- RESEARCH BOX -->
+
+    <div class="research-box">
+
+      <h3>Research Interests</h3>
 
       <ul>
-        <li>Density Functional Theory and Time‑Dependent DFT</li>
-        <li>Non‑Hermitian quantum mechanics</li>
-        <li>Auto‑ionizing and metastable excited states</li>
-        <li>Spectroscopy and excited‑state dynamics</li>
+        <li>Density Functional Theory (DFT)</li>
+        <li>Time-Dependent DFT (TDDFT)</li>
+        <li>Many-Body Green's Function Methods</li>
+        <li>Metastable and Autoionizing States</li>
+        <li>Non-Hermitian Quantum Mechanics</li>
+        <li>Excited-State Spectroscopy</li>
+        <li>Low-Scaling Electronic Structure Methods</li>
       </ul>
+
     </div>
 
-  </section>
+  </div>
 
-</main>
+</section>
 
-<footer>© 2026 Abhisek Ghosal</footer>
+<footer>
+  <p>© 2026 Abhisek Ghosal | Northwestern University</p>
+</footer>
 
 </body>
 </html>
-
