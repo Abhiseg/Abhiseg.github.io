@@ -836,6 +836,7 @@ img {
   font-weight: 600;
 }
 
+
 /* =========================================
    CV PAGE
 ========================================= */
@@ -844,11 +845,23 @@ img {
 
   padding:
     150px
-    6%
+    5%
     80px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
 }
 
+/* HEADER */
+
 .cv-header {
+
+  width: 100%;
+
+  max-width: 1100px;
 
   text-align: center;
 
@@ -857,7 +870,7 @@ img {
 
 .cv-header h2 {
 
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
 
   color: var(--nw-purple);
 
@@ -896,7 +909,7 @@ img {
 
   padding:
     14px
-    28px;
+    30px;
 
   background: var(--nw-purple);
 
@@ -904,11 +917,14 @@ img {
 
   text-decoration: none;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
   font-weight: 600;
 
   transition: 0.3s ease;
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.12);
 }
 
 .cv-download:hover {
@@ -924,17 +940,25 @@ img {
 
   width: 100%;
 
-  height: 1000px;
+  max-width: 1400px;
 
-  border-radius: 18px;
+  height: 88vh;
+
+  background: white;
+
+  border-radius: 22px;
 
   overflow: hidden;
 
   box-shadow:
-    0 12px 30px rgba(0,0,0,0.12);
+    0 20px 45px rgba(0,0,0,0.15);
 
   border: 1px solid var(--border);
+
+  margin: auto;
 }
+
+/* PDF */
 
 .cv-container iframe {
 
@@ -944,10 +968,12 @@ img {
 
   border: none;
 
-  background: white;
+  display: block;
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -956,11 +982,18 @@ img {
     padding:
       170px
       20px
-      70px;
+      60px;
   }
 
   .cv-container {
 
-    height: 700px;
+    height: 75vh;
+
+    border-radius: 16px;
+  }
+
+  .cv-header h2 {
+
+    font-size: 2.5rem;
   }
 }
