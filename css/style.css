@@ -1005,29 +1005,28 @@ img {
 .publications-page {
 
   padding:
-    160px
-    8%
-    90px;
+    150px
+    5%
+    80px;
 
   display: flex;
 
-  justify-content: center;
-}
+  flex-direction: column;
 
-.publications-container {
-
-  width: 100%;
-
-  max-width: 1200px;
+  align-items: center;
 }
 
 /* HEADER */
 
 .publications-header {
 
+  width: 100%;
+
+  max-width: 1100px;
+
   text-align: center;
 
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
 
 .publications-header h2 {
@@ -1036,23 +1035,34 @@ img {
 
   color: var(--nw-purple);
 
-  margin-bottom: 15px;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.publications-header .line {
+
+  margin:
+    20px auto
+    30px;
 }
 
 .publications-header p {
-
-  color: var(--muted);
-
-  font-size: 1.05rem;
 
   max-width: 850px;
 
   margin: auto;
 
+  color: var(--muted);
+
   line-height: 1.9;
+
+  font-size: 1.05rem;
 }
 
-/* PROFILE LINKS */
+/* =========================================
+   PROFILE LINKS
+========================================= */
 
 .profile-links {
 
@@ -1060,7 +1070,7 @@ img {
 
   justify-content: center;
 
-  gap: 20px;
+  gap: 18px;
 
   flex-wrap: wrap;
 
@@ -1069,26 +1079,28 @@ img {
 
 .profile-links a {
 
-  text-decoration: none;
+  display: inline-block;
 
   padding:
     14px
-    24px;
-
-  border-radius: 12px;
+    26px;
 
   background: white;
 
-  border: 1px solid var(--border);
-
   color: var(--nw-purple);
+
+  text-decoration: none;
+
+  border-radius: 12px;
+
+  border: 1px solid var(--border);
 
   font-weight: 600;
 
   transition: 0.3s ease;
 
   box-shadow:
-    0 6px 16px rgba(0,0,0,0.05);
+    0 6px 16px rgba(0,0,0,0.06);
 }
 
 .profile-links a:hover {
@@ -1100,7 +1112,20 @@ img {
   transform: translateY(-3px);
 }
 
-/* PUBLICATION CARD */
+/* =========================================
+   PUBLICATIONS CONTAINER
+========================================= */
+
+.publications-container {
+
+  width: 100%;
+
+  max-width: 1200px;
+}
+
+/* =========================================
+   PUBLICATION CARD
+========================================= */
 
 .publication-item {
 
@@ -1108,14 +1133,16 @@ img {
 
   border: 1px solid var(--border);
 
-  border-radius: 18px;
+  border-radius: 22px;
 
-  padding: 30px 35px;
+  padding:
+    32px
+    38px;
 
-  margin-bottom: 28px;
+  margin-bottom: 30px;
 
   box-shadow:
-    0 10px 25px rgba(0,0,0,0.05);
+    0 10px 28px rgba(0,0,0,0.06);
 
   transition: 0.3s ease;
 }
@@ -1125,27 +1152,29 @@ img {
   transform: translateY(-4px);
 
   box-shadow:
-    0 18px 35px rgba(0,0,0,0.08);
+    0 20px 40px rgba(0,0,0,0.10);
 }
 
 /* TITLE */
 
 .publication-title {
 
-  font-size: 1.15rem;
+  font-size: 1.2rem;
 
   font-weight: 700;
 
   color: var(--nw-purple);
 
-  line-height: 1.6;
+  line-height: 1.7;
 
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 /* AUTHORS */
 
 .publication-authors {
+
+  font-size: 1rem;
 
   color: var(--text);
 
@@ -1158,14 +1187,20 @@ img {
 
 .publication-journal {
 
+  font-size: 0.98rem;
+
   color: var(--muted);
 
   font-style: italic;
 
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+
+  line-height: 1.7;
 }
 
-/* BUTTONS */
+/* =========================================
+   PUBLICATION BUTTONS
+========================================= */
 
 .publication-links {
 
@@ -1178,19 +1213,23 @@ img {
 
 .publication-links a {
 
-  text-decoration: none;
-
-  color: white;
-
-  background: var(--nw-purple);
+  display: inline-block;
 
   padding:
     10px
     18px;
 
+  background: var(--nw-purple);
+
+  color: white;
+
+  text-decoration: none;
+
   border-radius: 10px;
 
-  font-size: 0.95rem;
+  font-size: 0.92rem;
+
+  font-weight: 500;
 
   transition: 0.25s ease;
 }
@@ -1198,9 +1237,13 @@ img {
 .publication-links a:hover {
 
   background: var(--accent);
+
+  transform: translateY(-2px);
 }
 
-/* MOBILE */
+/* =========================================
+   MOBILE
+========================================= */
 
 @media (max-width: 900px) {
 
@@ -1214,11 +1257,49 @@ img {
 
   .publication-item {
 
-    padding: 24px;
+    padding:
+      24px
+      22px;
   }
 
   .publications-header h2 {
 
     font-size: 2.5rem;
   }
+
+  .publication-title {
+
+    font-size: 1.08rem;
+  }
 }
+
+@media (max-width: 600px) {
+
+  .profile-links {
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .profile-links a {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    text-align: center;
+  }
+
+  .publication-links {
+
+    flex-direction: column;
+  }
+
+  .publication-links a {
+
+    width: fit-content;
+  }
+}
+
+
