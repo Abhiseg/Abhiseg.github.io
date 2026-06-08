@@ -1026,7 +1026,7 @@ img {
 
   text-align: center;
 
-  margin-bottom: 45px;
+  margin-bottom: 60px;
 }
 
 .publication-header h2 {
@@ -1043,28 +1043,8 @@ img {
 .publication-header .line {
 
   margin:
-    20px auto
-    30px;
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 900px) {
-
-  .publication-page {
-
-    padding:
-      170px
-      20px
-      60px;
-  }
-
-  .publication-header h2 {
-
-    font-size: 2.5rem;
-  }
+    22px auto
+    45px;
 }
 
 
@@ -1082,7 +1062,6 @@ img {
 
   flex-wrap: wrap;
 
-  margin-top: 35px;
 }
 
 .profile-links a {
@@ -1210,22 +1189,31 @@ img {
   line-height: 1.7;
 }
 
+
 /* =========================================
-   MOBILE ADDITIONS
+   MOBILE
 ========================================= */
 
 @media (max-width: 900px) {
+
+  .publication-page {
+
+    padding:
+      170px
+      20px
+      60px;
+  }
+
+  .publication-header h2 {
+
+    font-size: 2.5rem;
+  }
 
   .publication-item {
 
     padding:
       24px
       22px;
-  }
-
-  .publication-title {
-
-    font-size: 1.08rem;
   }
 }
 
