@@ -54,4 +54,38 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Lightbox for carousel figures
+  const overlay = document.createElement("div");
+  overlay.className = "lightbox-overlay";
+  overlay.innerHTML = '<button class="lightbox-close" aria-label="Close">&times;</button><img src="" alt="">';
+  document.body.appendChild(overlay);
+
+  const overlayImg = overlay.querySelector("img");
+  const closeBtn = overlay.querySelector(".lightbox-close");
+
+  function openLightbox(src, alt) {
+    overlayImg.src = src;
+    overlayImg.alt = alt || "";
+    overlay.classList.add("open");
+  }
+
+  function closeLightbox() {
+    overlay.classList.remove("open");
+    overlayImg.src = "";
+  }
+
+  document.querySelectorAll(".slides img, .attached-image img").forEach(img => {
+    img.addEventListener("click", () => openLightbox(img.src, img.alt));
+  });
+
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) closeLightbox();
+  });
+
+  closeBtn.addEventListener("click", closeLightbox);
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
 });
