@@ -215,9 +215,7 @@ img {
   aspect-ratio: 4 / 3;
   /* REMOVED FIXED HEIGHT */
 
-  background:
-    url("../images/abhisek_profile_photo.png")
-    center center / cover no-repeat;
+  object-fit: cover;
 
   border-radius: 20px;
   box-shadow:
